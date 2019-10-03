@@ -1,0 +1,19 @@
+<p-toast position="top-left"></p-toast>
+<div class="row">
+  <div class="col-12 col-md-8">
+    <!-- <p-fileUpload name="upload[]" [url]="url" multiple="multiple" [maxFileSize]="maxFileSize" accept="accept"
+      (onUpload)="onUpload($event)" (onError)="onError($event)"> -->
+    <p-fileUpload name="upload[]" [url]="url" [maxFileSize]="maxFileSize" [accept]="accept" customUpload="true"
+      (uploadHandler)="onUpload($event)" (onError)="onError($event)">
+
+      <ng-template pTemplate="content">
+        <ul *ngIf="uploadedFiles.length">
+          <li *ngFor="let file of uploadedFiles">
+            <div>{{file.name}}</div>
+            <div><small>{{file.size}} bytes</small></div>
+          </li>
+        </ul>
+      </ng-template>
+    </p-fileUpload>
+  </div>
+</div>

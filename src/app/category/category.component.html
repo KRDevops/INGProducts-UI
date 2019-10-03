@@ -1,0 +1,40 @@
+<p-accordion>
+  <p-accordionTab *ngFor="let category of categories" [header]="category.category_name"
+    [selected]="category_id==category.category_id">
+    <div class="card-deck">
+      <a [routerLink]="['/category',category.category_link_name,category.category_id]" routerLinkActive="active"
+        class="card text-orange" *ngFor="let category of categories">
+        <div class="card-body">
+          <h5 class="card-title">{{category.category_name}}</h5>
+        </div>
+      </a>
+    </div>
+  </p-accordionTab>
+</p-accordion>
+
+<!-- <div class="accordion" id="category">
+  <div class="card" *ngFor="let category of categories;let i = index">
+    <div class="card-header" id="heading{{i}}">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" [data-target]="'#collapse' + i"
+          aria-expanded="true" aria-controls="collapse{{i}}">{{category.category_name}}</button>
+      </h2>
+    </div>
+
+    <div *ngFor="let category of categories;let j = index" id="collapse{{j}}" class="collapse show"
+      [aria-labelledby]="'heading'+j" data-parent="#category">
+      <div class="card-body">
+        {{j}} {{category.category_name}}
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="card-deck">
+  <a [routerLink]="['/category',category.category_link_name,category.category_id]" routerLinkActive="active"
+    class="card text-orange" *ngFor="let category of categories">
+    <div class="card-body">
+      <h5 class="card-title">{{category.category_name}}</h5>
+    </div>
+  </a>
+</div> -->

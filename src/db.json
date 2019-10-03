@@ -1,0 +1,29 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "category_id": 1,
+            "category_name": "Credit Card"
+        },
+        {
+            "id": 2,
+            "category_id": 2,
+            "category_name": "Debit Card"
+        },
+        {
+            "id": 3,
+            "category_id": 3,
+            "category_name": "Saving Account"
+        },
+        {
+            "id": 4,
+            "category_id": 4,
+            "category_name": "Loans"
+        }
+    ],
+    "products": [
+        {
+            "id": 1
+        }
+    ]
+}

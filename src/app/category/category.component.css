@@ -1,0 +1,4 @@
+.card.active {
+    border-color: orange;
+    border-width: 2px;
+}

@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+a:hover {
+    text-decoration: none;
+}
+.ui-fileupload .ui-fileupload-buttonbar {
+    border: 0 !important;
+    /* background-color: #007ad9 !important; */
+    background-color: transparent !important;
+}
+
+.ui-fileupload .ui-fileupload-buttonbar p-button {
+    margin-left: 10px;
+}
+
+.ui-fileupload .ui-fileupload-buttonbar .ui-button {
+    background: white;
+    color: #007ad9;
+    margin-right: 0 !important;
+}
+.ui-state-disabled, body .ui-widget:disabled {
+    display: none;
+}
+
+.ui-fileupload .ui-fileupload-content {
+    border: 0 !important;
+    padding-top: 10px !important;
+}
+
+.ui-fileupload .ui-fileupload-content:empty {
+    display: none !important;
+}
+.ui-fileupload .ui-progressbar {
+    top: 10px !important;
+}
+.text-orange {
+    color: orange;
+}
