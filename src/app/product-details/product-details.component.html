@@ -1,10 +1,27 @@
-<div class="card-deck">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div *ngIf="product">
+  <app-heading title="{{product.product_name | uppercase}}"></app-heading>
+  <h2 class="h5 text-orange">{{product.category_name}}</h2>
+
+  <div class="pt-3">
+    <div>{{product.description}}</div>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam hic molestias tenetur repellat commodi
+        doloribus beatae distinctio, veniam fugiat eaque! Reprehenderit quibusdam totam unde tempore est natus nam quo
+        possimus.</p>
+      <p>Fugiat fugit totam deleniti porro, culpa quibusdam autem alias consequuntur voluptates? Quibusdam laborum
+        deleniti vitae natus? Et voluptatibus sunt, odio assumenda alias ab at! Fuga est nemo ipsum quibusdam
+        quam?</p>
+      <p>Ex nostrum atque, earum quasi sit animi alias explicabo architecto laboriosam unde vel numquam ipsa, quae
+        corporis non aliquam! Nam doloribus sunt sint ipsum architecto quisquam mollitia sed molestiae rerum?</p>
+      <p>Ducimus officia illo placeat odio cum, excepturi ipsam! Ducimus minima necessitatibus dicta quasi
+        mollitia, porro, tempora iure unde odio delectus magni magnam expedita, repellat labore asperiores veritatis
+        excepturi sunt repellendus!</p>
+      <p>Magni modi, adipisci recusandae quisquam culpa tenetur aut accusamus explicabo sed debitis possimus ea
+        similique pariatur atque nulla numquam inventore est. Esse blanditiis commodi error impedit sunt magnam nemo
+        earum?</p>
+      <p>Ab pariatur quasi tenetur. Necessitatibus delectus dicta pariatur ab architecto doloribus ipsum
+        repellendus saepe! Explicabo facilis odio, ducimus in et aut ea corporis amet eum saepe, alias, quae
+        doloremque velit.</p>
     </div>
   </div>
 </div>

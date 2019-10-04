@@ -23,7 +23,18 @@
     ],
     "products": [
         {
-            "id": 1
+            "id": 1,
+            "category_id": 1,
+            "product_id": 1,
+            "product_name": "product 1",
+            "description": "lorem ipsum dummy content 1"
+        },
+        {
+            "id": 2,
+            "category_id": 2,
+            "product_id": 2,
+            "product_name": "product 2",
+            "description": "lorem ipsum dummy content 2"
         }
     ]
 }

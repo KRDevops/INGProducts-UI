@@ -2,6 +2,13 @@
 a:hover {
     text-decoration: none;
 }
+a {
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
 .ui-fileupload .ui-fileupload-buttonbar {
     border: 0 !important;
     /* background-color: #007ad9 !important; */
@@ -34,4 +41,28 @@ a:hover {
 }
 .text-orange {
     color: orange;
+}
+
+.card.active {
+    border-color: orange;
+    border-width: 2px;
+}
+
+.ui-accordion .ui-accordion-header a {
+    padding: 15px 20px !important;
+    border-radius: 10px;
+}
+
+.ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active a {
+    background-color: orange !important;
+    border-color: orange !important;
+    border-radius: 10px 10px 0 0;
+}
+
+.ui-accordion .ui-accordion-header {
+    margin-bottom: 0 !important;
+}
+
+.ui-accordion .ui-accordion-content {
+    border-radius: 0 0 10px 10px;
 }

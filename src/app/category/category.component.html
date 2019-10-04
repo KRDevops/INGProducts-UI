@@ -1,40 +1,15 @@
-<p-accordion>
-  <p-accordionTab *ngFor="let category of categories" [header]="category.category_name"
-    [selected]="category_id==category.category_id">
-    <div class="card-deck">
-      <a [routerLink]="['/category',category.category_link_name,category.category_id]" routerLinkActive="active"
-        class="card text-orange" *ngFor="let category of categories">
-        <div class="card-body">
-          <h5 class="card-title">{{category.category_name}}</h5>
-        </div>
-      </a>
-    </div>
-  </p-accordionTab>
-</p-accordion>
-
-<!-- <div class="accordion" id="category">
-  <div class="card" *ngFor="let category of categories;let i = index">
-    <div class="card-header" id="heading{{i}}">
-      <h2 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" [data-target]="'#collapse' + i"
-          aria-expanded="true" aria-controls="collapse{{i}}">{{category.category_name}}</button>
-      </h2>
-    </div>
-
-    <div *ngFor="let category of categories;let j = index" id="collapse{{j}}" class="collapse show"
-      [aria-labelledby]="'heading'+j" data-parent="#category">
-      <div class="card-body">
-        {{j}} {{category.category_name}}
+<app-heading title="SERVICES"></app-heading>
+<div class="col-8 p-0">
+  <p-accordion [activeIndex]="index" (onClose)="onTabClose($event)" (onOpen)="onTabOpen($event)">
+    <p-accordionTab class="d-block mb-3" *ngFor="let category of categories; let i=index"
+      [header]="category.categoryName" [selected]="selectedAccordion">
+      <div class="card-deck">
+        <a class="card col-3" *ngFor="let product of category.products" [routerLink]="['/product',product.product_id]">
+          <div class="card-body">
+            <h5 class="card-title text-center text-orange">{{product.categoryId}}. {{product.categoryName}}</h5>
+          </div>
+        </a>
       </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="card-deck">
-  <a [routerLink]="['/category',category.category_link_name,category.category_id]" routerLinkActive="active"
-    class="card text-orange" *ngFor="let category of categories">
-    <div class="card-body">
-      <h5 class="card-title">{{category.category_name}}</h5>
-    </div>
-  </a>
-</div> -->
+    </p-accordionTab>
+  </p-accordion>
+</div>

@@ -21,26 +21,25 @@ export class UploadComponent implements OnInit {
   }
 
   onUpload(event) {
-    console.log('upload');
-    for (let file of event.file) {
-      this.uploadedFiles.push(file);
-    }
+    if (event && event.files.length) {
+      for (let file of event.files) {
+        this.uploadedFiles.push(file);
+      }
 
-    this.messageService.add({
-      severity: 'info',
-      summary: 'Success Message',
-      detail: 'Upload Successfully'
-    });
+      this.messageService.add({
+        severity: 'info',
+        summary: 'Upload',
+        detail: 'File Upload Successfully!'
+      });
+    }
   }
 
-  onError(event) {
-    console.log('error');
+  onError() {
     this.messageService.add({
       severity: 'info',
-      summary: 'Error Message',
-      detail: 'Upload Failed'
+      summary: 'Upload',
+      detail: 'File Upload Failed!'
     });
-    console.log(event);
   }
 
 

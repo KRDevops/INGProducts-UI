@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from './category.service';
 import { Category } from './category';
+import { ProductService } from '../product-details/product.service';
 
 @Component({
   selector: 'app-category',
@@ -10,19 +10,21 @@ import { Category } from './category';
 })
 export class CategoryComponent implements OnInit {
 
-  category_id: number;
   categories: Category[] = [];
-  constructor(private activatedRoute: ActivatedRoute, private categoryService: CategoryService, private router: Router) { }
+  index: number = 0;
+  selectedAccordion;
+
+  constructor(private categoryService: CategoryService, private productService: ProductService) { }
 
   ngOnInit() {
-    this.category_id = +this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(this.category_id);
-
     this.categoryService.getCategories().subscribe(res => {
-      res.forEach(r => {
-        r.category_link_name = this.convertStringIntoUrl(r.category_name);
-      });
-      this.categories = res;
+      console.log(res)
+      // res.forEach(r => {
+      //   this.productService.getProducts(r.category_id).subscribe(x => {
+      //     r.products = x;
+      //   });
+      // });
+      this.categories = res['category'];
     });
   }
 
@@ -30,4 +32,11 @@ export class CategoryComponent implements OnInit {
     return string.replace(/ /g, '-').toLowerCase();
   }
 
+  onTabClose(event) {
+    console.log(event);
+  }
+
+  onTabOpen(event) {
+    console.log(event);
+  }
 }

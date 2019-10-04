@@ -15,7 +15,6 @@ import { UploadComponent } from './core/upload/upload.component';
 import { AdminComponent } from './admin/admin.component';
 import { HeadingComponent } from './core/heading/heading.component';
 import { CategoryComponent } from './category/category.component';
-import { ProductListingComponent } from './product-listing/product-listing.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
@@ -28,7 +27,6 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     AdminComponent,
     HeadingComponent,
     CategoryComponent,
-    ProductListingComponent,
     ProductDetailsComponent
   ],
   imports: [
