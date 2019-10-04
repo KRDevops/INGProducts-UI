@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Product } from './product';
 import { ProductService } from './product.service';
 import { ActivatedRoute } from '@angular/router';
-import { CategoryService } from '../category/category.service';
 
 @Component({
   selector: 'app-product-details',
@@ -12,18 +11,17 @@ import { CategoryService } from '../category/category.service';
 export class ProductDetailsComponent implements OnInit {
 
   product: Product;
+  userForm: boolean = false;
 
-  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute, private categoryService: CategoryService) { }
+  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     let product_id = +this.activatedRoute.snapshot.paramMap.get('id');
-    this.productService.getProduct(product_id).subscribe(res => {
-      this.categoryService.getCategory(res.category_id).subscribe(x => {
-        res.category_id = x.category_id;
-        res.category_name = x.category_name;
-      });
-      this.product = res;
-    });
+    this.productService.getProduct(product_id).subscribe(res => this.product = res);
+  }
+
+  openForm() {
+    this.userForm = true;
   }
 
 }

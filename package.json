@@ -21,6 +21,7 @@
     "@angular/router": "~7.2.0",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "ng-starrating": "^1.0.7",
     "primeicons": "^2.0.0",
     "primeng": "^8.0.3",
     "rxjs": "~6.3.3",

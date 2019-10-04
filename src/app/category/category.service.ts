@@ -12,11 +12,7 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   getCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(environment.apiUrl + '/categories');
-  }
-
-  getCategory(id): Observable<Category> {
-    return this.http.get<Category>(environment.apiUrl + '/categories/' + id);
+    return this.http.get<Category[]>(`${environment.apiUrl}/categories`);
   }
 
 }

@@ -39,7 +39,8 @@ export class CategoryComponent implements OnInit {
     console.log(event);
     let category_id = this.categories[event.index].categoryId;
     this.productService.getProducts(category_id).subscribe(res => {
-      this.products = res;
+      this.products = res['productInterfaceResponseDto'];
+      console.log(this.products);
     });
   }
 }

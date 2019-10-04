@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FileUploadModule } from 'primeng/fileupload';
 import { ToastModule } from 'primeng/toast';
 import { AccordionModule } from 'primeng/accordion';
+import { RatingModule } from 'ng-starrating';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -36,7 +38,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     HttpClientModule,
     FileUploadModule,
     ToastModule,
-    AccordionModule
+    AccordionModule,
+    RatingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

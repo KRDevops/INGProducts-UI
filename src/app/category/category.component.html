@@ -4,9 +4,9 @@
     <p-accordionTab class="d-block mb-3" *ngFor="let category of categories" [header]="category.categoryName"
       [selected]="selectedAccordion">
       <div class="card-deck" *ngIf="products">
-        <a class="card col-3" *ngFor="let product of products" [routerLink]="['/product',product.product_id]">
+        <a class="card col-3" *ngFor="let product of products" [routerLink]="['/product',product.productId]">
           <div class="card-body">
-            <h5 class="card-title text-center text-orange">{{product.categoryId}}. {{product.categoryName}}</h5>
+            <h5 class="card-title text-center text-orange">{{product.productName}}</h5>
           </div>
         </a>
       </div>
