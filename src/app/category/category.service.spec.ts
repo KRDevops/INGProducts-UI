@@ -9,4 +9,9 @@ describe('CategoryService', () => {
     const service: CategoryService = TestBed.get(CategoryService);
     expect(service).toBeTruthy();
   });
+
+  it('should be products empty', () => {
+    const service: CategoryService = TestBed.get(CategoryService);
+    expect(service).toBeTruthy();
+  });
 });

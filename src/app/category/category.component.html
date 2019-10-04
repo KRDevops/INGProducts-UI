@@ -1,6 +1,6 @@
 <app-heading title="SERVICES"></app-heading>
 <div class="col-8 p-0">
-  <p-accordion (onClose)="onTabClose($event)" (onOpen)="onTabOpen($event)">
+  <p-accordion (onClose)="onTabClose()" (onOpen)="onTabOpen($event)">
     <p-accordionTab class="d-block mb-3" *ngFor="let category of categories" [header]="category.categoryName"
       [selected]="selectedAccordion">
       <div class="card-deck" *ngIf="products">
