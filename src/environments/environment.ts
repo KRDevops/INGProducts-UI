@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  // apiUrl: 'http://13.233.178.107:8090/ing'
-  apiUrl: 'http://10.117.189.108:8090/ing'
+  apiUrl: 'http://13.233.178.107:8090/ing'
 };
 
 /*
