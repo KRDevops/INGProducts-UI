@@ -19,7 +19,7 @@ export class CategoryComponent implements OnInit {
   constructor(private categoryService: CategoryService, private productService: ProductService) { }
 
   ngOnInit() {
-    this.categoryService.getCategories().subscribe(res => this.categories = res['category']);
+    this.categoryService.getCategories().subscribe(res => this.categories = res['data']);
   }
 
   onTabClose() {
